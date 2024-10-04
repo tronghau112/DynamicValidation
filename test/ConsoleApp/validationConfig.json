@@ -1,0 +1,42 @@
+[
+  {
+    "FieldName": "Name",
+    "Conditions": [
+      {
+        "PartnerName": "PartnerA",
+        "Expression": "item => System.Text.RegularExpressions.Regex.IsMatch(item, \"^[a-zA-Z ]+$\")",
+        "ErrorMessage": "The name must contain only letters and spaces."
+      },
+      {
+        "PartnerName": "PartnerA",
+        "Expression": "item => item != \"John!\"",
+        "ErrorMessage": "The name 'John!' is not acceptable."
+      },
+      {
+        "PartnerName": "PartnerB",
+        "Expression": "item => System.Text.RegularExpressions.Regex.IsMatch(item, \"^[a-zA-Z ]+$\")",
+        "ErrorMessage": "The name must contain only letters and spaces."
+      }
+    ]
+  },
+  {
+    "FieldName": "DateOfBirth",
+    "Conditions": [
+      {
+        "PartnerName": "PartnerA",
+        "Expression": "date => DateTime.Now.Year - date.Year >= 18",
+        "ErrorMessage": "The client must be at least 18 years old."
+      }
+    ]
+  },
+  {
+    "FieldName": "Number",
+    "Conditions": [
+      {
+        "PartnerName": "PartnerA",
+        "Expression": "value => value > 12",
+        "ErrorMessage": "The number must be greater than 12."
+      }
+    ]
+  }
+]
