@@ -10,9 +10,9 @@ public class Validation<T>(IConfigurationReader configurationReader) where T : c
     {
         List<string> results = [];
 
-        foreach (var rule in _configurationReader.GetFieldRules())
+        foreach (FieldRule rule in _configurationReader.GetFieldRules())
         {
-            foreach (var condition in rule.Conditions.Where(c => c.PartnerName == partnerName))
+            foreach (Condition condition in rule.Conditions.Where(c => c.PartnerName == partnerName))
             {
                 DynamicValidation<T> validator = await DynamicValidation<T>.CreateAsync(rule.FieldName, condition);
                 ValidationResult validationResult = validator.Validate(model);
