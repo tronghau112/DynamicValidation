@@ -9,9 +9,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\DynamicValidation\DynamicValidation.csproj" />
+		<PackageReference Include="SDynamicValidation" Version="1.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="validationConfig.json">
