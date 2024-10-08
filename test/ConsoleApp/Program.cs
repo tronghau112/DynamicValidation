@@ -10,7 +10,8 @@ ServiceProvider app = services.BuildServiceProvider();
 Validation<Client> validationEngine = app.GetRequiredService<Validation<Client>>();
 
 Client client = new() { Name = "John", DateOfBirth = DateTime.Now.AddYears(-15), Number = 10 };
-List<string> errors = validationEngine.Validate(client, "PartnerA").Result;
+
+List<string> errors = validationEngine.ValidateAsync(client, "PartnerA").Result;
 
 foreach (string error in errors)
 {

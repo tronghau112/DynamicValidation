@@ -34,8 +34,8 @@
     "Conditions": [
       {
         "PartnerName": "PartnerA",
-        "Expression": "value => value > 12",
-        "ErrorMessage": "The number must be greater than 12."
+        "Expression": "value => ConsoleApp.Helper.IsFormatValid(value)",
+        "ErrorMessage": "The number invalid format."
       }
     ]
   }

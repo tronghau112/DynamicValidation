@@ -12,3 +12,4 @@ Dynamic Validation Framework is a .NET library designed to simplify the process 
 ### Prerequisites
 
 - .NET 8.0
+- .NET 6.0

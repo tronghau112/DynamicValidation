@@ -5,11 +5,11 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{391156E8-1BA2-4FA4-B9B1-2FBBA6CAF060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicValidation", "src\DynamicValidation\DynamicValidation.csproj", "{6C7C51EF-DA67-4FE8-A612-8D054416DE15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicValidation", "src\DynamicValidation\DynamicValidation.csproj", "{6C7C51EF-DA67-4FE8-A612-8D054416DE15}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2E077B07-38F3-4A96-97B5-0EF07571BE98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "test\ConsoleApp\ConsoleApp.csproj", "{8D6DCF71-F2B2-4C49-ACC6-DB248F2F3221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "test\ConsoleApp\ConsoleApp.csproj", "{8D6DCF71-F2B2-4C49-ACC6-DB248F2F3221}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

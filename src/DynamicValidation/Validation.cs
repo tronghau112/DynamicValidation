@@ -2,13 +2,18 @@
 
 namespace DynamicValidation;
 
-public class Validation<T>(IConfigurationReader configurationReader) where T : class
+public class Validation<T> where T : class
 {
-    private readonly IConfigurationReader _configurationReader = configurationReader;
+    private readonly IConfigurationReader _configurationReader;
 
-    public async Task<List<string>> Validate(T model, string partnerName)
+    public Validation(IConfigurationReader configurationReader)
     {
-        List<string> results = [];
+        _configurationReader = configurationReader;
+    }
+
+    public async Task<List<string>> ValidateAsync(T model, string partnerName)
+    {
+        List<string> results = new();
 
         foreach (FieldRule rule in _configurationReader.GetFieldRules())
         {
